@@ -11,7 +11,7 @@ services:
     depends_on:
       - flask
   flask:
-    image: "potekhindv/flask:1.0"
+    image: "potekhindv/python3.10:2.0"
     container_name: flask
     environment:
       - FLASK_DEBUG=True
