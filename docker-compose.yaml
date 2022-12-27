@@ -11,7 +11,7 @@ services:
     depends_on:
       - flask
   flask:
-    image: "potekhindv/python3.10:2.0"
+    image: "potekhindv/flask:1.1"
     container_name: flask
     environment:
       - FLASK_DEBUG=True
@@ -33,3 +33,4 @@ services:
       - "5432:5432"
     volumes:
       - ./data:/var/lib/postgresql/data
+      - ./initdb.sql:/docker-entrypoint-initdb.d/initdb.sql
